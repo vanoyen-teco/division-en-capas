@@ -1,0 +1,49 @@
+<div class="container row">
+    <h1>Datos del servidor</h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <table class="table">
+                <tr>
+                    <td>Argumentos de entrada: </td>
+                    <td>
+                        {{#if server.argumentos}}
+                            {{#each server.argumentos}}
+                                <span>{{this}}</span>
+                            {{/each}}
+                        {{else}}
+                        <span>No se encontraron argumentos.</span>
+                        {{/if}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Plataforma: </td>
+                    <td>{{server.os}}</td>
+                </tr>
+                <tr>
+                    <td>CPUs: </td>
+                    <td>{{server.cpus}}</td>
+                </tr>
+                <tr>
+                    <td>Versión de node.js: </td>
+                    <td>{{server.nodeVersion}}</td>
+                </tr>
+                <tr>
+                    <td>Memoria total reservada: </td>
+                    <td>{{server.memory}}</td>
+                </tr>
+                <tr>
+                    <td>Carpeta del proyecto: </td>
+                    <td>{{server.path}}</td>
+                </tr>
+                <tr>
+                    <td>Path de ejecución: </td>
+                    <td>{{server.directorio}}</td>
+                </tr>
+                <tr>
+                    <td>Process id: </td>
+                    <td>{{server.processId}}</td>
+                </tr>
+            </table>
+        </div>        
+    </div>    
+</div>
